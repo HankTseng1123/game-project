@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://bfab3q4efwf7l"]
+
+[node name="Node2D" type="Node2D" unique_id=18712767]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2013977166]
+
+[node name="UI" type="Control" parent="CanvasLayer" unique_id=147723531]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="左側資訊欄" type="VBoxContainer" parent="CanvasLayer/UI" unique_id=151171667]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="資源數量顯示" type="Label" parent="CanvasLayer/UI/左側資訊欄" unique_id=1681421871]
+layout_mode = 2
+
+[node name="軍事升級按鈕" type="Button" parent="CanvasLayer/UI/左側資訊欄" unique_id=445043788]
+layout_mode = 2
+
+[node name="科技升級按鈕" type="Button" parent="CanvasLayer/UI/左側資訊欄" unique_id=252190521]
+layout_mode = 2
+
+[node name="文字資訊" type="Label" parent="CanvasLayer/UI/左側資訊欄" unique_id=1294751666]
+layout_mode = 2
+
+[node name="下一回合按鈕" type="Button" parent="CanvasLayer/UI/左側資訊欄" unique_id=1659956256]
+layout_mode = 2
+
+[node name="Node" type="Node" parent="." unique_id=1596245447]

@@ -2,6 +2,14 @@
 
 [ext_resource type="Texture2D" uid="uid://wu6mmobijjx7" path="res://Asset/Picture/網格.svg" id="1_nvcox"]
 
+[sub_resource type="Theme" id="Theme_jrjv5"]
+default_font_size = 35
+
+[sub_resource type="Theme" id="Theme_l8hfd"]
+default_font_size = 35
+
+[sub_resource type="Theme" id="Theme_pqlq5"]
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_l8hfd"]
 texture = ExtResource("1_nvcox")
 texture_region_size = Vector2i(128, 128)
@@ -42,41 +50,74 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = SubResource("Theme_jrjv5")
 
 [node name="左側資訊欄" type="VBoxContainer" parent="CanvasLayer/UI" unique_id=151171667]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 242.0
+grow_vertical = 2
+theme = SubResource("Theme_l8hfd")
 
 [node name="日期" type="Label" parent="CanvasLayer/UI/左側資訊欄" unique_id=562530645]
 layout_mode = 2
+size_flags_vertical = 3
+theme = SubResource("Theme_pqlq5")
+text = "日期"
 
 [node name="剩餘天數" type="Label" parent="CanvasLayer/UI/左側資訊欄" unique_id=1747557330]
 layout_mode = 2
+size_flags_vertical = 3
+text = "剩餘天數"
 
 [node name="資源數量顯示" type="Label" parent="CanvasLayer/UI/左側資訊欄" unique_id=1681421871]
 layout_mode = 2
+size_flags_vertical = 3
+text = "錢"
 
 [node name="當日新聞" type="Label" parent="CanvasLayer/UI/左側資訊欄" unique_id=1483120556]
 layout_mode = 2
+size_flags_vertical = 3
+text = "新聞"
+
+[node name="新聞內容" type="Label" parent="CanvasLayer/UI/左側資訊欄" unique_id=1370241043]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 5.0
+text = "內容"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/UI/左側資訊欄" unique_id=949960715]
 layout_mode = 2
+size_flags_vertical = 3
 
 [node name="科技升級按鈕" type="Button" parent="CanvasLayer/UI/左側資訊欄/HBoxContainer" unique_id=252190521]
 layout_mode = 2
+size_flags_horizontal = 3
+text = "軍事"
 
 [node name="軍事升級按鈕" type="Button" parent="CanvasLayer/UI/左側資訊欄/HBoxContainer" unique_id=445043788]
 layout_mode = 2
+size_flags_horizontal = 3
+text = "科技"
 
 [node name="文字資訊" type="Label" parent="CanvasLayer/UI/左側資訊欄" unique_id=1294751666]
 layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 6.0
 
 [node name="建造進度" type="Label" parent="CanvasLayer/UI/左側資訊欄" unique_id=150036517]
 layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 2.0
+text = "建造"
 
 [node name="下一回合按鈕" type="Button" parent="CanvasLayer/UI/左側資訊欄" unique_id=1659956256]
+custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 2.0
+text = "下一回合"
 
 [node name="TileMapLayer" type="TileMapLayer" parent="CanvasLayer/UI" unique_id=1549592075]
 position = Vector2(550, 28)

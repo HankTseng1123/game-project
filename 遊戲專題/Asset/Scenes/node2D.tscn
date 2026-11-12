@@ -48,16 +48,31 @@ layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
+[node name="日期" type="Label" parent="CanvasLayer/UI/左側資訊欄" unique_id=562530645]
+layout_mode = 2
+
+[node name="剩餘天數" type="Label" parent="CanvasLayer/UI/左側資訊欄" unique_id=1747557330]
+layout_mode = 2
+
 [node name="資源數量顯示" type="Label" parent="CanvasLayer/UI/左側資訊欄" unique_id=1681421871]
 layout_mode = 2
 
-[node name="軍事升級按鈕" type="Button" parent="CanvasLayer/UI/左側資訊欄" unique_id=445043788]
+[node name="當日新聞" type="Label" parent="CanvasLayer/UI/左側資訊欄" unique_id=1483120556]
 layout_mode = 2
 
-[node name="科技升級按鈕" type="Button" parent="CanvasLayer/UI/左側資訊欄" unique_id=252190521]
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/UI/左側資訊欄" unique_id=949960715]
+layout_mode = 2
+
+[node name="科技升級按鈕" type="Button" parent="CanvasLayer/UI/左側資訊欄/HBoxContainer" unique_id=252190521]
+layout_mode = 2
+
+[node name="軍事升級按鈕" type="Button" parent="CanvasLayer/UI/左側資訊欄/HBoxContainer" unique_id=445043788]
 layout_mode = 2
 
 [node name="文字資訊" type="Label" parent="CanvasLayer/UI/左側資訊欄" unique_id=1294751666]
+layout_mode = 2
+
+[node name="建造進度" type="Label" parent="CanvasLayer/UI/左側資訊欄" unique_id=150036517]
 layout_mode = 2
 
 [node name="下一回合按鈕" type="Button" parent="CanvasLayer/UI/左側資訊欄" unique_id=1659956256]

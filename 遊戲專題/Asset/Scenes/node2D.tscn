@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://djrard2eufan2" path="res://Asset/Scenes/node.gd" id="1_l8hfd"]
 [ext_resource type="Texture2D" uid="uid://wu6mmobijjx7" path="res://Asset/Picture/網格.svg" id="1_nvcox"]
+[ext_resource type="FontFile" uid="uid://biov3yh48lyl8" path="res://Asset/fonts/BoutiqueBitmap9x9_1.93/BoutiqueBitmap9x9HK_1.93.ttf" id="3_pqlq5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_l8hfd"]
 texture = ExtResource("1_nvcox")
@@ -18,19 +19,14 @@ texture_region_size = Vector2i(128, 128)
 tile_size = Vector2i(128, 128)
 sources/0 = SubResource("TileSetAtlasSource_l8hfd")
 
-[sub_resource type="GDScript" id="GDScript_4kxuq"]
-script/source = "extends TileMapLayer
+[sub_resource type="Theme" id="Theme_56xan"]
+default_font = ExtResource("3_pqlq5")
 
+[sub_resource type="Theme" id="Theme_jrjv5"]
+default_font_size = 70
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-"
+[sub_resource type="Theme" id="Theme_poxp1"]
+default_font_size = 50
 
 [sub_resource type="Theme" id="Theme_l8hfd"]
 default_font_size = 35
@@ -47,10 +43,10 @@ script = ExtResource("1_l8hfd")
 
 [node name="網格" type="TileMapLayer" parent="." unique_id=1549592075]
 unique_name_in_owner = true
+visible = false
 position = Vector2(550, 28)
 tile_map_data = PackedByteArray("AAAEAAAAAAAAAAEAAAAEAAEAAAAAAAEAAAAEAAIAAAAAAAEAAAAEAAUAAAAAAAEAAAAEAAYAAAAAAAEAAAAEAAcAAAAAAAEAAAAFAAAAAAAAAAEAAAAFAAEAAAAAAAEAAAAFAAIAAAAAAAEAAAAFAAMAAAAAAAEAAAAFAAQAAAAAAAEAAAAFAAUAAAAAAAEAAAAFAAYAAAAAAAEAAAAFAAcAAAAAAAEAAAAGAAAAAAAAAAEAAAAGAAEAAAAAAAEAAAAGAAIAAAAAAAEAAAAGAAMAAAAAAAEAAAAGAAQAAAAAAAEAAAAGAAUAAAAAAAEAAAAGAAYAAAAAAAEAAAAGAAcAAAAAAAEAAAAHAAAAAAAAAAEAAAAHAAEAAAAAAAEAAAAHAAIAAAAAAAEAAAAHAAUAAAAAAAEAAAAHAAYAAAAAAAEAAAAHAAcAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAEAAAAAAAEAAAAAAAIAAAAAAAEAAAAAAAMAAAAAAAEAAAAAAAQAAAAAAAEAAAAAAAUAAAAAAAEAAAAAAAYAAAAAAAEAAAAAAAcAAAAAAAEAAAABAAAAAAAAAAEAAAABAAEAAAAAAAEAAAABAAIAAAAAAAEAAAABAAMAAAAAAAEAAAABAAQAAAAAAAEAAAABAAUAAAAAAAEAAAABAAYAAAAAAAEAAAABAAcAAAAAAAEAAAACAAAAAAAAAAEAAAACAAEAAAAAAAEAAAACAAIAAAAAAAEAAAACAAMAAAAAAAEAAAACAAQAAAAAAAEAAAACAAUAAAAAAAEAAAACAAYAAAAAAAEAAAACAAcAAAAAAAEAAAADAAAAAAAAAAEAAAADAAEAAAAAAAEAAAADAAIAAAAAAAEAAAADAAUAAAAAAAEAAAADAAYAAAAAAAEAAAADAAcAAAAAAAEAAAAHAAMAAAAAAAEAAAAHAAQAAAAAAAEAAAADAAMAAAACAAAAAAAEAAMAAAACAAAAAFADAAQAAAACAAAAAGAEAAQAAAACAAAAADAAAAgAAAACAAEAAFABAAgAAAACAAEAAFACAAgAAAACAAEAAFADAAgAAAACAAEAAFAEAAgAAAACAAEAAFAFAAgAAAACAAEAAFAGAAgAAAACAAEAAFAHAAgAAAACAAEAAFAIAAcAAAACAAEAAAAIAAYAAAACAAEAAAAIAAUAAAACAAEAAAAIAAQAAAACAAEAAAAIAAMAAAACAAEAAAAIAAIAAAACAAEAAAAIAAEAAAACAAEAAAAIAAAAAAACAAEAAAAHAP//AAACAAEAAGAGAP//AAACAAEAAGAFAP//AAACAAEAAGAEAP//AAACAAEAAGADAP//AAACAAEAAGACAP//AAACAAEAAGABAP//AAACAAEAAGAAAP//AAACAAEAAGD//wAAAAACAAEAADD//wEAAAACAAEAADD//wIAAAACAAEAADD//wMAAAACAAEAADD//wQAAAACAAEAADD//wUAAAACAAEAADD//wYAAAACAAEAADD//wcAAAACAAEAADAIAAgAAAADAAAAAAAIAP//AAADAAAAAGD/////AAADAAAAADD//wgAAAADAAAAAFA=")
 tile_set = SubResource("TileSet_xrivr")
-script = SubResource("GDScript_4kxuq")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2013977166]
 
@@ -62,19 +58,43 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = SubResource("Theme_56xan")
 
 [node name="開始按鈕" type="Button" parent="CanvasLayer/UI" unique_id=1850556030]
-layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_top = -300.0
+offset_right = 200.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = SubResource("Theme_jrjv5")
+text = "開始遊戲"
 
 [node name="故事" type="Label" parent="CanvasLayer/UI" unique_id=751971999]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -561.0
+offset_right = 544.0
+offset_bottom = 101.0
+grow_horizontal = 2
+theme = SubResource("Theme_poxp1")
+text = "在這款遊戲中，大地被怪物佔據，世界陷入了一片黑暗之中，然而，一些仍懷抱著希望的人們齊聚一起，並發展成一座小有規模的城鎮，怪物們看見這座城市日漸繁盛後，打算率領大軍進攻此城。而玩家將擔任一城之主，阻止怪物大軍的進攻，雖然這些怪物數量龐大，他們卻有致命性的弱點，那就是「光」，因此玩家要在怪物大軍抵達之前成功建造燈塔，擊退怪物大軍。
+"
+autowrap_mode = 3
 
 [node name="左側資訊欄" type="VBoxContainer" parent="CanvasLayer/UI" unique_id=151171667]
 unique_name_in_owner = true
+visible = false
 layout_mode = 1
 anchors_preset = 9
 anchor_bottom = 1.0
@@ -143,6 +163,7 @@ text = "下一回合"
 
 [node name="右側命令選單" type="VBoxContainer" parent="CanvasLayer/UI" unique_id=506559715]
 unique_name_in_owner = true
+visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 1.0
@@ -167,4 +188,5 @@ size_flags_vertical = 3
 text = "待命
 "
 
+[connection signal="pressed" from="CanvasLayer/UI/開始按鈕" to="腳本" method="_on_開始按鈕_pressed"]
 [connection signal="pressed" from="CanvasLayer/UI/左側資訊欄/下一回合按鈕" to="腳本" method="_on_下一回合按鈕_pressed"]

@@ -43,10 +43,11 @@ script = ExtResource("1_l8hfd")
 
 [node name="網格" type="TileMapLayer" parent="." unique_id=1549592075]
 unique_name_in_owner = true
-visible = false
 position = Vector2(550, 28)
 tile_map_data = PackedByteArray("AAAEAAAAAAAAAAEAAAAEAAEAAAAAAAEAAAAEAAIAAAAAAAEAAAAEAAUAAAAAAAEAAAAEAAYAAAAAAAEAAAAEAAcAAAAAAAEAAAAFAAAAAAAAAAEAAAAFAAEAAAAAAAEAAAAFAAIAAAAAAAEAAAAFAAMAAAAAAAEAAAAFAAQAAAAAAAEAAAAFAAUAAAAAAAEAAAAFAAYAAAAAAAEAAAAFAAcAAAAAAAEAAAAGAAAAAAAAAAEAAAAGAAEAAAAAAAEAAAAGAAIAAAAAAAEAAAAGAAMAAAAAAAEAAAAGAAQAAAAAAAEAAAAGAAUAAAAAAAEAAAAGAAYAAAAAAAEAAAAGAAcAAAAAAAEAAAAHAAAAAAAAAAEAAAAHAAEAAAAAAAEAAAAHAAIAAAAAAAEAAAAHAAUAAAAAAAEAAAAHAAYAAAAAAAEAAAAHAAcAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAEAAAAAAAEAAAAAAAIAAAAAAAEAAAAAAAMAAAAAAAEAAAAAAAQAAAAAAAEAAAAAAAUAAAAAAAEAAAAAAAYAAAAAAAEAAAAAAAcAAAAAAAEAAAABAAAAAAAAAAEAAAABAAEAAAAAAAEAAAABAAIAAAAAAAEAAAABAAMAAAAAAAEAAAABAAQAAAAAAAEAAAABAAUAAAAAAAEAAAABAAYAAAAAAAEAAAABAAcAAAAAAAEAAAACAAAAAAAAAAEAAAACAAEAAAAAAAEAAAACAAIAAAAAAAEAAAACAAMAAAAAAAEAAAACAAQAAAAAAAEAAAACAAUAAAAAAAEAAAACAAYAAAAAAAEAAAACAAcAAAAAAAEAAAADAAAAAAAAAAEAAAADAAEAAAAAAAEAAAADAAIAAAAAAAEAAAADAAUAAAAAAAEAAAADAAYAAAAAAAEAAAADAAcAAAAAAAEAAAAHAAMAAAAAAAEAAAAHAAQAAAAAAAEAAAADAAMAAAACAAAAAAAEAAMAAAACAAAAAFADAAQAAAACAAAAAGAEAAQAAAACAAAAADAAAAgAAAACAAEAAFABAAgAAAACAAEAAFACAAgAAAACAAEAAFADAAgAAAACAAEAAFAEAAgAAAACAAEAAFAFAAgAAAACAAEAAFAGAAgAAAACAAEAAFAHAAgAAAACAAEAAFAIAAcAAAACAAEAAAAIAAYAAAACAAEAAAAIAAUAAAACAAEAAAAIAAQAAAACAAEAAAAIAAMAAAACAAEAAAAIAAIAAAACAAEAAAAIAAEAAAACAAEAAAAIAAAAAAACAAEAAAAHAP//AAACAAEAAGAGAP//AAACAAEAAGAFAP//AAACAAEAAGAEAP//AAACAAEAAGADAP//AAACAAEAAGACAP//AAACAAEAAGABAP//AAACAAEAAGAAAP//AAACAAEAAGD//wAAAAACAAEAADD//wEAAAACAAEAADD//wIAAAACAAEAADD//wMAAAACAAEAADD//wQAAAACAAEAADD//wUAAAACAAEAADD//wYAAAACAAEAADD//wcAAAACAAEAADAIAAgAAAADAAAAAAAIAP//AAADAAAAAGD/////AAADAAAAADD//wgAAAADAAAAAFA=")
 tile_set = SubResource("TileSet_xrivr")
+
+[node name="背景板" type="Sprite2D" parent="." unique_id=494133795]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2013977166]
 
@@ -83,9 +84,10 @@ layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -561.0
-offset_right = 544.0
-offset_bottom = 101.0
+offset_left = -550.0
+offset_top = 116.0
+offset_right = 555.0
+offset_bottom = 635.0
 grow_horizontal = 2
 theme = SubResource("Theme_poxp1")
 text = "在這款遊戲中，大地被怪物佔據，世界陷入了一片黑暗之中，然而，一些仍懷抱著希望的人們齊聚一起，並發展成一座小有規模的城鎮，怪物們看見這座城市日漸繁盛後，打算率領大軍進攻此城。而玩家將擔任一城之主，阻止怪物大軍的進攻，雖然這些怪物數量龐大，他們卻有致命性的弱點，那就是「光」，因此玩家要在怪物大軍抵達之前成功建造燈塔，擊退怪物大軍。
@@ -103,17 +105,20 @@ grow_vertical = 2
 theme = SubResource("Theme_l8hfd")
 
 [node name="日期" type="Label" parent="CanvasLayer/UI/左側資訊欄" unique_id=562530645]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
 theme = SubResource("Theme_pqlq5")
 text = "日期"
 
 [node name="剩餘天數" type="Label" parent="CanvasLayer/UI/左側資訊欄" unique_id=1747557330]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
 text = "剩餘天數"
 
 [node name="資源數量顯示" type="Label" parent="CanvasLayer/UI/左側資訊欄" unique_id=1681421871]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
 text = "錢"
@@ -149,6 +154,7 @@ size_flags_vertical = 3
 size_flags_stretch_ratio = 6.0
 
 [node name="建造進度" type="Label" parent="CanvasLayer/UI/左側資訊欄" unique_id=150036517]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 2.0
@@ -187,6 +193,11 @@ layout_mode = 2
 size_flags_vertical = 3
 text = "待命
 "
+
+[node name="關閉" type="Button" parent="CanvasLayer/UI" unique_id=183060146]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
 
 [connection signal="pressed" from="CanvasLayer/UI/開始按鈕" to="腳本" method="_on_開始按鈕_pressed"]
 [connection signal="pressed" from="CanvasLayer/UI/左側資訊欄/下一回合按鈕" to="腳本" method="_on_下一回合按鈕_pressed"]
